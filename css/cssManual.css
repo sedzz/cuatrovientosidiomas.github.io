@@ -3,3 +3,15 @@
 div#myDiv{
     background-image: url("../imagenes/fotoHeader.jpg");
     }
+.negrita{
+    font-weight: bold;
+}
+.fondoImagenTel{
+    background-image: url(../imagenes/fondoSection4V.jpg);
+    background-repeat: no-repeat;
+}
+.fondo-azul{
+    background-color: rgb(44, 133, 196);
+    width: 100%;
+    position: fixed;
+}
