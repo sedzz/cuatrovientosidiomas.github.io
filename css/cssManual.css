@@ -14,4 +14,14 @@ div#myDiv{
     background-color: rgb(44, 133, 196);
     width: 100%;
     position: fixed;
+    z-index: 1;
+}
+
+
+.hide {
+    max-height: 0 !important;
+}
+
+#listaDesplegable {
+    font-size: 50px;
 }

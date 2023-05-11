@@ -19,68 +19,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
   });
-  
-  function validarFormulario() {
-    // Obtener los valores ingresados por el usuario
-    var nombre = document.getElementById("nombre").value;
-    var apellido = document.getElementById("apellido").value;
-    var email = document.getElementById("email").value;
-    var contrasena = document.getElementById("contrasena").value;
-    var dni = document.getElementById("dni").value;
-    var fechaNacimiento = document.getElementById("fecha-nacimiento").value;
-    var telefono = document.getElementById("telefono").value;
+  function validateForm() {
+    // Get input values    
+    let email = document.getElementById('email').value;
+    let dni = document.getElementById('dni').value;  
+    let phone = document.getElementById('phone').value;   
     
-    // Validar que los campos no estén vacíos
-    if (nombre === "" || apellido === "" || email === "" || contrasena === "" || dni === "" || fechaNacimiento === "" || telefono === "") {
-      alert("Por favor, complete todos los campos.");
+    // Email validation  
+    const emailRegEx = /^\S+@\S+\.\S+$/;  
+    if(!emailRegEx.test(email)) {
+      alert('Please enter a valid email address');
+      return false;    
+    }
+    
+    // DNI must be 8 digits 
+    if (!/^\d{8}$/.test(dni)) {
+      alert('Please enter a valid 8 digit DNI');    
       return false;
     }
     
-    // Validar que nombre y apellido solo contengan letras
-    var letrasRegex = /^[A-Za-zÁáÉéÍíÓóÚúÜüñÑ\s]+$/;
-    if (!letrasRegex.test(nombre) || !letrasRegex.test(apellido)) {
-      alert("El nombre y el apellido solo deben contener letras.");
+    // Phone number validation 
+    const phoneRegEx =  /^\+?(\d[\d\-]{7,15})$/;  
+    if(!phoneRegEx.test(phone)){   
+      alert('Please enter a valid phone number with country code');
       return false;
     }
     
-    // Validar el formato del correo electrónico utilizando una expresión regular
-    var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (!emailRegex.test(email)) {
-      alert("Por favor, ingrese un correo electrónico válido.");
-      return false;
-    }
-    
-    // Validar el formato del DNI utilizando una expresión regular
-    var dniRegex = /^\d{8}[a-zA-Z]$/;
-    if (!dniRegex.test(dni)) {
-      alert("Por favor, ingrese un DNI válido (8 dígitos seguidos de una letra).");
-      return false;
-    }
-    
-    // Validar que la fecha de nacimiento sea una fecha válida y mayor a 10 años
-    var fechaRegex = /^\d{4}-\d{2}-\d{2}$/;
-    if (!fechaRegex.test(fechaNacimiento)) {
-      alert("Por favor, ingrese una fecha de nacimiento válida.");
-      return false;
-    }
-    var fechaActual = new Date();
-    var fechaNac = new Date(fechaNacimiento);
-    var edadMinima = 10; // Edad mínima permitida (en años)
-    var diferenciaTiempo = fechaActual - fechaNac;
-    var edadEnAnios = Math.floor(diferenciaTiempo / (1000 * 60 * 60 * 24 * 365.25));
-    if (edadEnAnios < edadMinima) {
-      alert("Debe tener al menos " + edadMinima + " años para registrarse.");
-      return false;
-    }
-    
-    // Validar que el número de teléfono tenga 9 dígitos
-    var telefonoRegex = /^\d{9}$/;
-    if (!telefonoRegex.test(telefono)) {
-      alert("Por favor, ingrese un número de teléfono válido (9 dígitos).");
-      return false;
-    }
-    
-    // Validación exitosa
-    alert("Formulario enviado correctamente.");
+    // If all validation passes  
     return true;
-  }
+  }   
