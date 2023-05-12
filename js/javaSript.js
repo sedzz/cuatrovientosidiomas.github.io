@@ -1,17 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
   
-    // Add a click event on each of them
     $navbarBurgers.forEach( el => {
       el.addEventListener('click', () => {
   
-        // Get the target from the "data-target" attribute
         const target = el.dataset.target;
         const $target = document.getElementById(target);
   
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         el.classList.toggle('is-active');
         $target.classList.toggle('is-active');
   
@@ -19,32 +15,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
   });
-  function validateForm() {
-    // Get input values    
-    let email = document.getElementById('email').value;
-    let dni = document.getElementById('dni').value;  
-    let phone = document.getElementById('phone').value;   
+  function mostrarOcultarTexto() {
+    var textoElement = document.getElementById("textoMostrado");
+    var botonElement = document.getElementById("botonMostrar");
     
-    // Email validation  
-    const emailRegEx = /^\S+@\S+\.\S+$/;  
-    if(!emailRegEx.test(email)) {
-      alert('Please enter a valid email address');
-      return false;    
+    if (textoElement.style.display === "none") {
+      textoElement.style.display = "block";
+      botonElement.innerHTML = "Ocultar Texto";
+    } else {
+      textoElement.style.display = "none";
+      botonElement.innerHTML = "Mostrar Texto";
     }
-    
-    // DNI must be 8 digits 
-    if (!/^\d{8}$/.test(dni)) {
-      alert('Please enter a valid 8 digit DNI');    
-      return false;
+  }
+  
+
+  function mostrarOcultarDiv() {
+    let div = document.getElementsByClassName("preguntasFrec")[0];
+    if (div.style.display == "none") {
+      div.style.display = "block";
+    } else {
+      div.style.display = "none";
     }
-    
-    // Phone number validation 
-    const phoneRegEx =  /^\+?(\d[\d\-]{7,15})$/;  
-    if(!phoneRegEx.test(phone)){   
-      alert('Please enter a valid phone number with country code');
-      return false;
-    }
-    
-    // If all validation passes  
-    return true;
-  }   
+  }
+
+  var rotation= 0;
+
+  function rotate(){
+
+  rotation = (rotation+60 > 360) ? 0 : rotation+60;
+
+  document.getElementById("text").className = "rotation"+rotation;
+  }
+
+
+  window.setInterval("rotate()", 1000);
+
