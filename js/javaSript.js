@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
   });
+
   function mostrarOcultarTexto() {
     var textoElement = document.getElementById("textoMostrado");
     var botonElement = document.getElementById("botonMostrar");
-    
-    if (textoElement.style.display === "none") {
+      if (textoElement.style.display === "none") {
       textoElement.style.display = "block";
       botonElement.innerHTML = "Ocultar Texto";
     } else {
@@ -27,10 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
       botonElement.innerHTML = "Mostrar Texto";
     }
   }
-  
 
-  function mostrarOcultarDiv() {
-    let div = document.getElementsByClassName("preguntasFrec")[0];
+  function mostrarOcultarDiv(button) {
+    let div = button.parentElement.nextElementSibling;
     if (div.style.display == "none") {
       div.style.display = "block";
     } else {
@@ -50,3 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.setInterval("rotate()", 1000);
 
+  var enlaceDescarga = document.getElementById('descargarPDF');
+
+  enlaceDescarga.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = this.href;
+  });

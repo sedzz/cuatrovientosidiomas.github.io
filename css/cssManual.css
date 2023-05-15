@@ -17,7 +17,12 @@ div#myDiv{
     z-index: 1;
 }
 
-
+.cardsPruebasNivel{
+    padding-top: 1 rem;
+    padding-bottom: 1 rem;
+    padding-left: 1.5 rem;
+    padding-right: 1.5 rem;
+}
 
 .hide {
     max-height: 0 !important;
@@ -25,4 +30,19 @@ div#myDiv{
 
 #listaDesplegable {
     font-size: 50px;
+}
+
+#sectionPruebasNivel{
+    position: relative;
+    top: -40px;
+}
+.hero-body .title {
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+  }
+.hero-body .subtitle {
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+  }
+
+#descripNuestroEquipo{
+    font-size: 1.2rem;
 }
