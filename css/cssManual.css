@@ -1,5 +1,10 @@
-
-
+.mostrar {
+    display: block;
+  }
+.textoOculto {
+    display: none;
+  }
+  
 div#myDiv{
     background-image: url("../imagenes/fotoHeader.jpg");
     }
@@ -11,7 +16,8 @@ div#myDiv{
     background-repeat: no-repeat;
 }
 .fondo-azul{
-    background-color: rgb(44, 133, 196);
+    /*background-color: rgb(19, 24, 28);*/
+    background-color: hsl(204, 86%, 53%);
     width: 100%;
     position: fixed;
     z-index: 1;
