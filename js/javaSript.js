@@ -2,14 +2,17 @@
 
 /*UNAI*/
 
-function ocultar(){
-  document.getElementById('frmClaseGratis').style.display = 'none';
-}
-function mostrar(){
-    document.getElementById('frmClaseGratis').style.display = 'block';
+/*
+function mostrarClaseGratis(){
+    If (document.getElementById('frmClaseGratis').style.display = 'block');
+      document.getElementById('frmClaseGratis').style.display = 'none';
+    } else {
+      document.getElementById('frmClaseGratis').style.display = 'block';
+    }
+    
 }
 
-
+*/
 /* TERMINÓ LO DE UNAI */
 
 
@@ -61,50 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     window.location.href = this.href;
   });
-
-
-/*
-
-  function mostrarOcultarDiv(button) {
-    let div = button.parentElement.nextElementSibling;
-    if (div.style.display == "none") {
-    div.style.display = "block";
-    } else {
-    div.style.display = "none";
-    }
-    }
-
-
-
-*/
-/*function mostrarOcultarDiv() {
-  let div = this.parentElement.parentElement.nextElementSibling;
-  div.classList.toggle("mostrar");
-}
-
-const buttons = document.querySelectorAll('.mostrar-ocultar-button');
-buttons.forEach((button) => {
-  button.addEventListener('click', mostrarOcultarDiv);
-}); */
-
-
-/*function mostrarOcultarDiv() {
-  let div = this.parentElement.nextElementSibling;
-  if (div.style.display === "none") {
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
-}
-
-const buttons = document.querySelectorAll('.mostrar-ocultar-button');
-const buttonsArray = Array.from(buttons); // Convertir a un array
-buttonsArray.forEach((button) => {
-  button.addEventListener('click', mostrarOcultarDiv);
-});*/
-
-
-
 
 
     /*VALIDACIÓN FORMULARIO*/

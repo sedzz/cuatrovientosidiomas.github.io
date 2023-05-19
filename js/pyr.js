@@ -13,10 +13,3 @@ document.addEventListener("DOMContentLoaded", function() {
       content.style.display = "none";
     }
   }
-
-var check=document.querySelector(".check");
-check.addEventListener('click',idioma);
-
-function idioma(){
-    
-}

@@ -52,3 +52,43 @@ div#myDiv{
 #descripNuestroEquipo{
     font-size: 1.2rem;
 }
+
+.textoInicio{
+    position: absolute;
+    margin-top: 200px;
+    left: 6vw;
+    text-shadow: 1cm;
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.carousel {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+
+  }
+  
+  .carousel-inner {
+    width: 300%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transition: left 3s ease-in-out;
+  }
+  
+  .carousel-inner img {
+    max-width: 100vw;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .carousel-inner img.active {
+    opacity: 1;
+  }
