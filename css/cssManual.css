@@ -1,6 +1,9 @@
 .mostrar {
     display: block;
   }
+.oculto{
+  display: none;
+}
 .textoOculto {
     display: none;
   }
@@ -21,6 +24,22 @@ div#myDiv{
     width: 100%;
     position: fixed;
     z-index: 1;
+}
+
+#reloj {
+  background: linear-gradient(to right, blue, purple);
+}
+
+
+.clock {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.clock span {
+  padding: 0 10px;
 }
 
 .cardsPruebasNivel{

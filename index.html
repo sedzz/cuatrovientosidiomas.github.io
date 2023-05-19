@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,68 +15,73 @@
     <section class="hero is-info is-fullheight">
       <div class="hero-head fondo-azul">
         <nav class="navbar-end">
-            <div class="navbar-brand">
-              <a class="navbar-item" href="../">
-                <img src="./imagenes/logo.png" alt="Logo">
-              </a>
-              <span class="navbar-burger burger" data-target="navbarMenu">
-                <span></span>
-                <span></span>
-                <span></span>
+          <div class="navbar-brand">
+            <a class="navbar-item" href="../">
+              <img src="./imagenes/logo.png" alt="Logo">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <span class="navbar-item">
+                <a class="button is-white is-outlined" href="#">
+                  <span class="icon">
+                    <i class="fas fa-home"></i>
+                  </span>
+                  <span>Inicio</span>
+                </a>
+              </span>
+              <span class="navbar-item">
+                <a class="button is-white is-outlined" href="#preguntasFrecuentesTitulo">
+                  <span class="icon">
+                    <i class="fas fa-info-circle fa-pulse"></i>
+                  </span>
+                  <span>Preguntas Frecuentes</span>
+                </a>
+              </span>
+              <span class="navbar-item has-dropdown is-hoverable" style="bottom: -8px">
+                <a class="button is-white is-outlined" href="#">
+                  <span class="icon">
+                    <i class="fa fa-book"></i>  
+                  </span>
+                  <span>Cursos</span>      
+                </a>
+                <div class="navbar-dropdown" style="top: 40px;">    
+                  <a class="navbar-item has-text-grey-darker" href="#">
+                    Inglés
+                  </a>       
+                  <a class="navbar-item has-text-grey-darker" href="#">
+                    Francés  
+                  </a>      
+                </div>    
+              </span>
+              <span class="navbar-item">                  
+                <a class="button is-white is-outlined" href="#">
+                  <span class="icon">
+                    <img src="./imagenes/banderaEN.png" alt="Bandera de inglés">
+                  </span>
+                </a>
               </span>
             </div>
-            <div id="navbarMenu" class="navbar-menu">
-              <div class="navbar-end">
-                <span class="navbar-item">
-                  <a class="button is-white is-outlined" href="#">
-                    <span class="icon">
-                      <i class="fas fa-home"></i>
-                    </span>
-                    <span>Inicio</span>
-                  </a>
-                </span>
-                <span class="navbar-item">
-                  <a class="button is-white is-outlined" href="#preguntasFrecuentesTitulo">
-                    <span class="icon">
-                      <i class="fas fa-info-circle fa-pulse"></i>
-                    </span>
-                    <span>Preguntas Frecuentes</span>
-                  </a>
-                </span>
-                <span class="navbar-item has-dropdown is-hoverable" style="bottom: -8px">
-                  <a class="button is-white is-outlined" href="#">
-                    <span class="icon">
-                      <i class="fa fa-book"></i>  
-                    </span>
-                    <span>Cursos</span>      
-                  </a>
-                  <div class="navbar-dropdown" style="top: 40px;">    
-                    <a class="navbar-item has-text-grey-darker" href="#">
-                      Inglés
-                    </a>       
-                    <a class="navbar-item has-text-grey-darker" href="#">
-                      Francés  
-                    </a>      
-                  </div>    
-                </span>
-                <span class="navbar-item">                  
-                  <a class="button is-white is-outlined" href="#">
-                    <span class="icon">
-                      <img src="./imagenes/banderaEN.png" alt="Bandera de inglés">
-                    </span>
-                  </a>
-                </span>
-              </div>
-            </div>
-
+          </div>
         </nav>
         </div>
 
+        <div id="reloj">
+          <div class="clock">
+            <span id="hour"></span> :
+            <span id="minute"></span> :
+            <span id="second"></span>
+          </div>
 
         <div>
           <div class="carousel">
             <div class="carousel-inner">
-              <img src="./imagenes/ALUMNADO IDIOMAS.JPG" alt="Imagen 1" class="active">
+              <img src="./imagenes/ALUMNADO_IDIOMAS.JPG" alt="Imagen 1" class="active">
               <img src="./imagenes/banderaEN.png" alt="Imagen 2">
               <img src="./imagenes/bigben.png" alt="Imagen 3">
             </div>
@@ -122,8 +127,8 @@
               <h4>A2</h4>
               <p>Lunes y Miércoles de 16:30 a 18:00 h</p>
               <a class="button is-link modal-button" href="#idformulario">Matricúlate</a>
-              <button class="button is-link modal-button botonMostrar">Mostrar Más Información</button>
-              <p class="textoOculto" style="display: none;">Dirigido a: Jóvenes y adultos que quieren continuar su aprendizaje o que quieran mejorar algún aspecto del idioma.
+              <button class="button is-link modal-button botonMostrar">Mostrar más información</button>
+              <p class="textoOculto oculto">Dirigido a: Jóvenes y adultos que quieren continuar su aprendizaje o que quieran mejorar algún aspecto del idioma.
                 <br><br>Objetivo: Comprender frases y expresiones usadas en contextos más específicos como intercambio de información personal y familiar, compras, trabajo, etc… Comunicarse en tareas sencillas que requieren intercambio de información simple y directo en la vida cotidiana. Ser capaz de hablar de manera sencilla sobre su entorno y origen cultural.
                 <br><br>Pago completo: 550 €
                 <br><br>Pago mensual:  75 €</p>
@@ -136,8 +141,8 @@
               <h4>B1</h4>
               <p>B1.1-Lunes y Miércoles de 18:00 A 19:30 h<br>B1.2-Martes y Jueves de 16:30 A 18:00 h<br>B1-Preparación Examen Oficial estudiantes FP - Martes y Jueves de 16:30 A 18:00 h<br>B1-Preparación Examen Oficial - Lunes y Miércoles de 18:00 A 19:30 h</p>
                 <a class="button is-link modal-button" href="#idformulario">Matricúlate</a>
-                <button class="button is-link modal-button botonMostrar">Mostrar Más Información</button>
-              <p class="textoOculto" style="display: none;">¡Hola, este es el texto que se muestra!</p>
+                <button class="button is-link modal-button botonMostrar">Mostrar más información</button>
+              <p class="textoOculto oculto">¡Hola, este es el texto que se muestra!</p>
             </div>
           </div>
         </div>
@@ -147,8 +152,8 @@
               <h4>B2</h4>
               <p>B2 Preparación Examen Oficial estudiantes FP- Martes y Jueves de 15:30 a 16:30 h<br>B2 Preparación Examen Oficial - Martes y Jueves de 18:00 a 19:30 h<br>B2.1 Lunes y Miércoles de 19:30 a 21:00 h<br>B2.2 Lunes y Miércoles de 16:30 a 18:00 h</p>
                 <a class="button is-link modal-button" href="#idformulario">Matricúlate</a>
-                <button class="button is-link modal-button botonMostrar">Mostrar Más Información</button>
-              <p class="textoOculto" style="display: none;">¡Hola, este es el texto que se muestra!</p>
+                <button class="button is-link modal-button botonMostrar">Mostrar más información</button>
+              <p class="textoOculto oculto">¡Hola, este es el texto que se muestra!</p>
             </div>
           </div>
         </div>
@@ -160,8 +165,8 @@
                 <h4>C1</h4>
                 <p>C1 Preparación Examen Oficial - Lunes y Miércoles de 19:30 a 21:00 h</p>
                 <a class="button is-link modal-button" href="#idformulario">Matricúlate</a>
-                <button class="button is-link modal-button botonMostrar">Mostrar Más Información</button>
-              <p class="textoOculto" style="display: none;">¡Hola, este es el texto que se muestra!</p>
+                <button class="button is-link modal-button botonMostrar">Mostrar más información</button>
+              <p class="textoOculto oculto">¡Hola, este es el texto que se muestra!</p>
               </div>
             </div>
         </div>
@@ -171,8 +176,8 @@
               <h4>C2</h4>
               <p>Martes y Jueves 19:30 a 21:00 h</p>
                 <a class="button is-link modal-button" href="#idformulario">Matricúlate</a>
-                <button class="button is-link modal-button botonMostrar">Mostrar Más Información</button>
-              <p class="textoOculto" style="display: none;">¡Hola, este es el texto que se muestra!</p>
+                <button class="button is-link modal-button botonMostrar">Mostrar más información</button>
+              <p class="textoOculto oculto">¡Hola, este es el texto que se muestra!</p>
             </div>
           </div>
         </div>
@@ -182,14 +187,13 @@
               <h4>EXTRAS</h4>
               <p>SPEAKING: Martes de 19:30 a 20:30 h<br>REFUERZO: A2: Lunes y Miércoles 15:30 a 16:30 h <br> B1: Martes y Jueves 150 a 16:30 h<br>GRUPO ADAPTADO DE FP ESPECIAL Y FP BÁSICA<br>Martes 16:30 a 18:30 h</p>
                 <a class="button is-link modal-button" href="#idformulario">Matricúlate</a>
-                <button class="button is-link modal-button botonMostrar">Mostrar Más Información</button>
-              <p class="textoOculto" style="display: none;">¡Hola, este es el texto que se muestra!</p>
+                <button class="button is-link modal-button botonMostrar">Mostrar más información</button>
+              <p class="textoOculto oculto">¡Hola, este es el texto que se muestra!</p>
             </div>
           </div>
         </div>
         </div>
       </div>
-    </div>
   </section>
   <section class="hero is-info is-small">
     <div class="hero-body">
@@ -210,8 +214,8 @@
               <h4>A1</h4>
               <p>Martes y Jueves de 15:00 a 16:30 </p>
               <a class="button is-link modal-button" href="#idformulario">Matricúlate</a>
-              <button class="button is-link modal-button botonMostrar">Mostrar Más Información</button>
-              <p class="textoOculto" style="display: none;">¡Hola, este es el texto que se muestra!</p>
+              <button class="button is-link modal-button botonMostrar">Mostrar más información</button>
+              <p class="textoOculto oculto">¡Hola, este es el texto que se muestra!</p>
             </div>
           </div>
       </div>
@@ -221,8 +225,8 @@
             <h4>B1</h4>
             <p>Preparación Examen Oficial- Martes de 17:00 a 19:00 h</p>
                 <a class="button is-link modal-button" href="#idformulario">Matricúlate</a>
-                <button class="button is-link modal-button botonMostrar">Mostrar Más Información</button>
-                <p class="textoOculto" style="display: none;">¡Hola, este es el texto que se muestra!</p>
+                <button class="button is-link modal-button botonMostrar">Mostrar más información</button>
+                <p class="textoOculto oculto">¡Hola, este es el texto que se muestra!</p>
           </div>
         </div>
       </div>
@@ -232,8 +236,8 @@
             <h4>B2</h4>
             <p>Martes y Jueves de 09:15 a 10:45 h</p>
                 <a class="button is-link modal-button" href="#idformulario">Matricúlate</a>
-                <button class="button is-link modal-button botonMostrar">Mostrar Más Información</button>
-                <p class="textoOculto" style="display: none;">¡Hola, este es el texto que se muestra!</p>
+                <button class="button is-link modal-button botonMostrar">Mostrar más información</button>
+                <p class="textoOculto oculto">¡Hola, este es el texto que se muestra!</p>
           </div>
         </div>
       </div>
@@ -345,9 +349,9 @@
     </div>
 </section>
 
-<section id="frmClaseGratis">
-  <form class="box" style="max-width: 500px;" onsubmit="return validateForm()">
-    <h2>Apúntate a una clase <span class="negrita">gratis</span>span></span></h2>
+<section id="frmClaseGratis oculto" onsubmit="validateForm()">
+  <form class="box is-centered">
+    <h2>Apúntate a una clase <span class="negrita">gratis</span></h2>
     
     <div class="field">
       <label class="label">Nombre y Apellidos</label>
@@ -371,7 +375,7 @@
     </div>
     
     <div class="field">
-      <label class="label">¿Tienes experiencia previa en el idioma?</label>
+      <label class="label">Idioma:</label>
       <div class="control">
         <label class="radio">
           <input type="radio" name="experience" value="no" required>
@@ -385,7 +389,7 @@
     </div>
 
     <div class="field">
-      <label class="label">¿Tienes experiencia previa en el idioma?</label>
+      <label class="label">Nivel: (realiza una prueba de nivel para conocer cuál es)</label>
       <div class="control">
         <label class="radio">
           <input type="radio" name="experience" value="si" required>
@@ -413,14 +417,22 @@
    <div class="field">
       <button class="button is-link is-outlined is-medium" type="submit">Enviar</button>
     </div>
+    <div class="field">
+      <button class="button is-outlined is-medium" onclick="ocultarClaseGratis()">Cancelar</button>
+    </div>
   </form> 
 </section>
 
-<div class="box cta">
-  <section id="idformulaio">
-    <form class="box" style="max-width: 500px;">
-      <h2>Formulario de Registro</h2>
-      
+<div class="">
+  <div class="hero has-background-primary">
+    <div class="hero-body">
+      <p class="title has-text-centered has-text-black">  
+       FORMULARIO DE REGISTRO
+      </p>
+    </div>
+  </div>
+  <section id="idformulario">
+    <form class="box">
       <div class="field">
         <label class="label">Nombre</label>
         <div class="control">
@@ -497,7 +509,7 @@
       <div class="field">
         <label class="label">¿Cuál es tu objetivo al aprender este idioma?</label>
         <div class="control">
-          <textarea class="textarea" id="objective" required></textarea>
+          <textarea class="textarea" id="objective"></textarea>
         </div>
       </div>
       
@@ -511,7 +523,7 @@
 
 <!-- NUESTRO EQUIPO-->
 <section>
-  <div class="hero has-background-primary ">
+  <div class="hero has-background-primary">
     <div class="hero-body">
       <p class="title has-text-centered has-text-black">  
         NUESTRO EQUIPO
@@ -535,7 +547,6 @@
             <h1 class="title post-title">Profesores Nativos de Inglaterra y Francia</h1>
             <p class="post-excerpt" id="descripNuestroEquipo">Contamos con una gran plantilla de profesionales. Nuestros profesores de idiomas son nativos, y ofrecemos un servicio especializado a nuestros clientes. Clases amenas y seguimiento durante todo el curso incluso por vía telemática.</p>
           </div>
-
         </div>
       </article>
     </div>
@@ -558,37 +569,37 @@
  
 <article id="container" class="message is-info">
   <div class="message-header" id="clickable">
-    <p>Pregunta 1</p>
+    <p>¿Qué idiomas ofrecen en su escuela?</p>
     <span class="icon is-small">
       <i class="fas fa-reply" aria-hidden="true"></i>
     </span>
   </div>
-  <div class="message-body" id="content" style="display: none;">
-    Contenido 1
+  <div class="message-body oculto" id="content">
+    Ofrecemos clases de Ingles y Frances en todos los niveles.
   </div>
 </article> 
 
 <article id="container" class="message is-info">
-  <div class="message-header" id="clickable">
-    <p>Pregunta 2</p>
+  <div class="message-heder" id="clickable">
+    <p>¿Cuál es a duración de los cursos?</p>
     <span class="icon is-small">
       <i class="fas fa-reply" aria-hidden="true"></i>
     </span>
   </div>
-  <div class="message-body" id="content" style="display: none;">
-    Contenido 2
+  <div class="message-body oculto oculto" id="content">
+    La duración de nuestros cursos varía dependiendo del idioma, nivel y tipo de curso. Ofrecemos cursos intensivos de 4 semanas, cursos regulares de 8 semanas y cursos semestrales de 16 semanas.
   </div>
 </article> 
 
 <article id="container" class="message is-info">
-  <div class="message-header" id="clickable">
-    <p>Pregunta 3</p>
+  <div class="message-heh2der" id="clickable">
+    <p>¿Hay oportunidades de práctica con hablantes nativos del idih2ma que estoy aprendiendo?</p>
     <span class="icon is-small">
       <i class="fas fa-reply" aria-hidden="true"></i>
     </span>
   </div>
-  <div class="message-body" id="content" style="display: none;">
-    Contenido 3
+  <div class="message-body oculto" id="content">
+    Sí, ofrecemos oportunidades de práctica con hablantes nativos del idioma a través de intercambios de idiomas, eventos culturales y actividades sociales. También trabajamos en colaboración con organizaciones locales para ofrecer oportunidades de práctica adicionales para nuestros estudiantes.
   </div>
 </article>
 
@@ -623,7 +634,7 @@
 
 					<h4 class="text-capitalize mb-4 has-text-white">CENTRO INTEGRADO CUATROVIENTOS</h4>
 					<ul class="list-unstyled">
-            <li>Tlf:(+34) 948 12 41 29</li></p>
+            <li:(+34) 948 12 41 29</li></p>
 						<li><a href="">info@cuatrovientos.org</a></li>
 					</ul>					
           <br>
