@@ -338,7 +338,7 @@
                               </div>
                           </div>
                           <div class="content">
-                            <a class="button is-link modal-button" onclick="mostrarClaseGratis()">APÚNTATE</a>
+                           <a class="button is-link modal-button"  onclick="mostrarClaseGratis()">APÚNTATE</a> 
                           </div>
                       </div>
                   </div>
@@ -351,7 +351,7 @@
   <form class="box is-centered">
     <h2>Apúntate a una clase <span class="negrita">gratis</span></h2>
     
-    <div class="field">
+    <div class="field" id="form-nombre">
       <label class="label">Nombre y Apellidos</label>
       <div class="control">
         <input class="input" type="text" id="Tname" required>
@@ -412,6 +412,8 @@
       </div>
     </div>
 
+    
+
    <div class="field">
       <button class="button is-link is-outlined is-medium" type="submit">Enviar</button>
     </div>
@@ -429,15 +431,15 @@
       </p>
     </div>
   </div>
-  <div id="idformulario">
-    <form class="box">
+  <div>
+    <form class="box" id="idformulario" method="post" action="formularioExitoso.html">
       <div class="field">
         <label class="label">Nombre</label>
         <div class="control">
           <input class="input" type="text" id="name" required>
         </div>
       </div>
-      
+      <!-- hecho -->
       <div class="field">
         <label class="label">DNI</label>
         <div class="control">
@@ -446,16 +448,16 @@
       </div>
       
       <div class="field">
-        <label class="label">Fecha de nacimiento</label>
+        <label class="label">Fecha de Nacimiento</label>
         <div class="control">
-          <input class="input" type="date" id="dob" required>
+          <input class="input" type="date" id="fecha" required>
         </div>
       </div>
       
       <div class="field">
-        <label class="label">Correo Electrónico</label>
+        <label class="label">Correo electrónico</label>
         <div class="control">
-          <input class="input" type="email" id="e" required>
+          <input class="input" type="email" id="email" required>
         </div>
       </div>
       
@@ -518,7 +520,7 @@
     </form> 
   </div>
 </div>
-
+<script src="./js/validaciones.js"></script>
 <!-- NUESTRO EQUIPO-->
 <div>
   <div class="hero has-background-primary">
