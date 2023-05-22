@@ -10,6 +10,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://kit.fontawesome.com/bdea931727.js" crossorigin="anonymous"></script>
     <script src="./js/pyr.js"></script>
+    <script src="./js/burger.js"></script>
   </head>
   <body>
     <section class="hero is-info is-fullheight">
@@ -51,10 +52,10 @@
                   <span>Cursos</span>      
                 </a>
                 <div class="navbar-dropdown" style="top: 40px;">    
-                  <a class="navbar-item has-text-grey-darker" href="#">
+                  <a class="navbar-item has-text-grey-darker" href="#ofertaIngles">
                     Inglés
                   </a>       
-                  <a class="navbar-item has-text-grey-darker" href="#">
+                  <a class="navbar-item has-text-grey-darker" href="#ofertaFrances">
                     Francés  
                   </a>      
                 </div>    
@@ -74,10 +75,10 @@
         <div id="reloj">
           <div class="clock">
             <span id="hour"></span> :
-            <span id="minute"></span> :
+            <span id="minute"></span> : 
             <span id="second"></span>
           </div>
-
+        </div>
         <div>
           <div class="carousel">
             <div class="carousel-inner">
@@ -88,7 +89,6 @@
           </div>
         </div>
         <script src="./js/carrousel.js"></script>
-      </div>
       <div class="container has-text-centered textoInicio">
         <h1 class="title">
         Cuatrovientos Idiomas
@@ -195,7 +195,7 @@
         </div>
       </div>
   </section>
-  <div class="hero is-info is-small">
+  <div class="hero is-info is-small" id="ofertaFrances">
     <div class="hero-body">
       <div class="container has-text-centered">
         <p class="title">
@@ -338,7 +338,7 @@
                               </div>
                           </div>
                           <div class="content">
-                           <a class="button is-link modal-button"  onclick="mostrarClaseGratis()">APÚNTATE</a> 
+                           <a class="button is-link modal-button" onclick="mostrarClaseGratis()">APÚNTATE</a> 
                           </div>
                       </div>
                   </div>
@@ -347,28 +347,21 @@
       </div>
 </section>
 
-<section id="frmClaseGratis" class="oculto" onsubmit="validateForm()">
+<section id="frmClaseGratis" class="oculto">
   <form class="box is-centered">
     <h2>Apúntate a una clase <span class="negrita">gratis</span></h2>
     
     <div class="field" id="form-nombre">
-      <label class="label">Nombre y Apellidos</label>
+      <label class="label">Nombre</label>
       <div class="control">
-        <input class="input" type="text" id="Tname" required>
-      </div>
-    </div>
-    
-    <div class="field">
-      <label class="label">DNI</label>
-      <div class="control">
-        <input class="input" type="text" id="Tdni" required>
+        <input class="input" type="text" id="Tname">
       </div>
     </div>
     
     <div class="field">
       <label class="label">Correo Electrónico</label>
       <div class="control">
-        <input class="input" type="email" id="Te" required>
+        <input class="input" type="email" id="Te">
       </div>
     </div>
     
@@ -376,11 +369,11 @@
       <label class="label">Idioma:</label>
       <div class="control">
         <label class="radio">
-          <input type="radio" name="experience" value="no" required>
+          <input type="radio" name="experience" value="no">
           INGLÉS
         </label>
         <label class="radio">
-          <input type="radio" name="experience" value="no" required>
+          <input type="radio" name="experience" value="no">
           FRANCÉS
         </label>
       </div>
@@ -390,23 +383,23 @@
       <label class="label">Nivel: (realiza una prueba de nivel para conocer cuál es)</label>
       <div class="control">
         <label class="radio">
-          <input type="radio" name="experience" value="si" required>
+          <input type="radio" name="experience" value="si">
           A2
         </label>
         <label class="radio">
-          <input type="radio" name="experience" value="no" required>
+          <input type="radio" name="experience" value="no">
           B1
         </label>
         <label class="radio">
-          <input type="radio" name="experience" value="no" required>
+          <input type="radio" name="experience" value="no">
           B2
         </label>
         <label class="radio">
-          <input type="radio" name="experience" value="no" required>
+          <input type="radio" name="experience" value="no">
           C1
         </label>
         <label class="radio">
-          <input type="radio" name="experience" value="no" required>
+          <input type="radio" name="experience" value="no">
           C2
         </label>
       </div>

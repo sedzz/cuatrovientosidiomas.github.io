@@ -94,3 +94,53 @@ function validarNombre() {
       document.querySelector('button[type="submit"]').disabled = false;
     }
   }
+
+
+// Obtener referencias a los elementos del formulario
+const levelSelect = document.getElementById('level');
+const experienceRadios = document.getElementsByName('experience');
+const objectiveTextarea = document.getElementById('objective');
+
+// Función para validar el nivel de conocimiento
+function validarNivel() {
+  if (levelSelect.value === '') {
+    levelSelect.classList.add('is-invalid');
+  } else {
+    levelSelect.classList.remove('is-invalid');
+  }
+}
+
+function validarExperiencia() {
+  let experienciaSeleccionada = false;
+  for (let i = 0; i < experienceRadios.length; i++) {
+    if (experienceRadios[i].checked) {
+      experienciaSeleccionada = true;
+      break;
+    }
+  }
+  if (!experienciaSeleccionada) {
+    for (let i = 0; i < experienceRadios.length; i++) {
+      experienceRadios[i].classList.add('is-invalid');
+    }
+  } else {
+    for (let i = 0; i < experienceRadios.length; i++) {
+      experienceRadios[i].classList.remove('is-invalid');
+    }
+  }
+}
+
+// Función para validar el objetivo
+function validarObjetivo() {
+  if (objectiveTextarea.value.trim() === '') {
+    objectiveTextarea.classList.add('is-invalid');
+  } else {
+    objectiveTextarea.classList.remove('is-invalid');
+  }
+}
+
+// Agregar eventos de escucha para validar los campos
+levelSelect.addEventListener('input', validarNivel);
+for (let i = 0; i < experienceRadios.length; i++) {
+  experienceRadios[i].addEventListener('input', validarExperiencia);
+}
+objectiveTextarea.addEventListener('input', validarObjetivo);

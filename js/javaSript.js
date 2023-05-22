@@ -1,15 +1,11 @@
-
-
-/*UNAI*/
-
-
 function mostrarClaseGratis() {
   document.getElementById('frmClaseGratis').style.display = 'block';
 }
-
 function ocultarClaseGratis() {
   document.getElementById('frmClaseGratis').style.display = 'none';
 }
+
+
 
 function reloj() {
   var now = new Date();
@@ -28,28 +24,16 @@ function reloj() {
 
 setInterval(reloj, 1000);
 
-/* TERMINÓ LO DE UNAI */
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById("botonUA").addEventListener("click", mostrarClaseGratis);
+  document.getElementById("botonUB").addEventListener("click", ocultarClaseGratis);
 
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-  
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
-  
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-  
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-  
-      });
-    });
-  
-  });
-  
+  setInterval(reloj, 1000);
+
+
+  /* ÁLEX*/
   function mostrarOcultarTexto(boton) {
     var textoElement = boton.nextElementSibling;
     
@@ -73,9 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+
   var enlaceDescarga = document.getElementById('descargarPDF');
 
   enlaceDescarga.addEventListener('click', function(e) {
     e.preventDefault();
     window.location.href = this.href;
   });
+  /* FINAL ÁLEX*/
