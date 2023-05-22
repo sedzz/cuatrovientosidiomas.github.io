@@ -119,22 +119,14 @@ function validarExperiencia() {
     }
   }
   if (!experienciaSeleccionada) {
-    for (let i = 0; i < experienceRadios.length; i++) {
-      experienceRadios[i].classList.add('is-invalid');
-    }
-  } else {
-    for (let i = 0; i < experienceRadios.length; i++) {
-      experienceRadios[i].classList.remove('is-invalid');
-    }
-  }
+    alert("No has seleccionado el nivel de experiencia.");
+  } 
 }
 
 // Función para validar el objetivo
 function validarObjetivo() {
   if (objectiveTextarea.value.trim() === '') {
-    objectiveTextarea.classList.add('is-invalid');
-  } else {
-    objectiveTextarea.classList.remove('is-invalid');
+    alert('Introduce algo en el campo Objetivo.');
   }
 }
 

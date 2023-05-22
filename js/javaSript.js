@@ -27,10 +27,6 @@ setInterval(reloj, 1000);
 
 
 
-  document.getElementById("botonUA").addEventListener("click", mostrarClaseGratis);
-  document.getElementById("botonUB").addEventListener("click", ocultarClaseGratis);
-
-  setInterval(reloj, 1000);
 
 
   /* ÁLEX*/
@@ -48,7 +44,10 @@ setInterval(reloj, 1000);
   
   window.addEventListener("DOMContentLoaded", function() {
     var botones = document.getElementsByClassName("botonMostrar");
-  
+    
+    document.getElementById("botonUA").addEventListener("click", mostrarClaseGratis);
+    document.getElementById("botonUB").addEventListener("click", ocultarClaseGratis);
+    
     for (var i = 0; i < botones.length; i++) {
       var boton = botones[i];
       
