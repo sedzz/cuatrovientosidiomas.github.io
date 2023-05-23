@@ -1,3 +1,5 @@
+
+
 const nombreInput = document.getElementById('name');
 nombreInput.addEventListener('input', validarNombre);
 
@@ -96,18 +98,14 @@ function validarNombre() {
   }
 
 
-// Obtener referencias a los elementos del formulario
 const levelSelect = document.getElementById('level');
 const experienceRadios = document.getElementsByName('experience');
 const objectiveTextarea = document.getElementById('objective');
 
-// Función para validar el nivel de conocimiento
 function validarNivel() {
   if (levelSelect.value === '') {
-    levelSelect.classList.add('is-invalid');
-  } else {
-    levelSelect.classList.remove('is-invalid');
-  }
+    alert('Selecciona un nivel.')
+  } 
 }
 
 function validarExperiencia() {

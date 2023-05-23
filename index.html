@@ -104,9 +104,6 @@
 
   <script src="./js/carrousel.js"></script>
 
-
-
-
   <div class="box cta"></div>
 
   <section class="hero is-info is-small" id="ofertaIngles">
@@ -477,7 +474,7 @@
       <div class="field">
         <label class="label">Nivel de conocimiento</label>
         <div class="control">
-          <select class="input" id="level" required>
+          <select class="input" id="level">
             <option value="">Seleccionar nivel</option>
             <option value="principiante">Principiante</option>
             <option value="intermedio">Intermedio</option>
@@ -490,11 +487,11 @@
         <label class="label">¿Tienes experiencia previa en el idioma?</label>
         <div class="control">
           <label class="radio">
-            <input type="radio" name="experience" value="si" required>
+            <input type="radio" name="experience" value="si" >
             Sí
           </label>
           <label class="radio">
-            <input type="radio" name="experience" value="no" required>
+            <input type="radio" name="experience" value="no" >
             No
           </label>
         </div>
@@ -517,7 +514,7 @@
 <script src="./js/validaciones.js"></script>
 <!-- NUESTRO EQUIPO-->
 <div>
-  <div class="hero has-background-primary">
+  <div id="equipo" class="hero has-background-primary">
     <div class="hero-body">
       <p class="title has-text-centered has-text-black">  
         NUESTRO EQUIPO
@@ -619,9 +616,9 @@
 					<h4 class="text-capitalize mb-4 has-text-white">Links Rápidos</h4>
 
 					<ul class="list-unstyled footer-menu lh-35">
-						<li><a href="#">Preguntas Frecuentes</a></li>
-						<li><a href="#">Cursos</a></li>
-						<li><a href="#">Equipo de Cuatro Vientos Idiomas</a></li>
+						<li><a href="#preguntasFrecuentesTitulo">Preguntas Frecuentes</a></li>
+						<li><a href="#ofertaIngles">Cursos</a></li>
+						<li><a href="#equipo">Equipo de Cuatro Vientos Idiomas</a></li>
 					</ul>
 				</div>
 			</div>
@@ -630,7 +627,7 @@
 
 					<h4 class="text-capitalize mb-4 has-text-white">CENTRO INTEGRADO CUATROVIENTOS</h4>
 					<ul class="list-unstyled">
-            <li>:(+34) 948 12 41 29</li>
+            <li>Tlf:(+34) 948 12 41 29</li>
 						<li><a href="">info@cuatrovientos.org</a></li>
 					</ul>					
           <br>

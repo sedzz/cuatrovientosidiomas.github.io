@@ -1,11 +1,3 @@
-function mostrarClaseGratis() {
-  document.getElementById('frmClaseGratis').style.display = 'block';
-}
-function ocultarClaseGratis() {
-  document.getElementById('frmClaseGratis').style.display = 'none';
-}
-
-
 
 function reloj() {
   var now = new Date();
@@ -25,10 +17,6 @@ function reloj() {
 setInterval(reloj, 1000);
 
 
-
-
-
-
   /* ÁLEX*/
   function mostrarOcultarTexto(boton) {
     var textoElement = boton.nextElementSibling;
@@ -44,10 +32,7 @@ setInterval(reloj, 1000);
   
   window.addEventListener("DOMContentLoaded", function() {
     var botones = document.getElementsByClassName("botonMostrar");
-    
-    document.getElementById("botonUA").addEventListener("click", mostrarClaseGratis);
-    document.getElementById("botonUB").addEventListener("click", ocultarClaseGratis);
-    
+
     for (var i = 0; i < botones.length; i++) {
       var boton = botones[i];
       
@@ -56,12 +41,20 @@ setInterval(reloj, 1000);
       });
     }
   });
-
-
+  
   var enlaceDescarga = document.getElementById('descargarPDF');
 
   enlaceDescarga.addEventListener('click', function(e) {
     e.preventDefault();
     window.location.href = this.href;
   });
-  /* FINAL ÁLEX*/
+/*Álex fin*/ 
+/*UNAI*/
+  function mostrarClaseGratis() {
+    document.getElementById('frmClaseGratis').style.display = 'block';
+  }
+  function ocultarClaseGratis() {
+    document.getElementById('frmClaseGratis').style.display = 'none';
+  }
+document.getElementById("botonUA").addEventListener("click", mostrarClaseGratis);
+document.getElementById("botonUB").addEventListener("click", ocultarClaseGratis);
